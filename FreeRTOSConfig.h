@@ -54,11 +54,9 @@
 #ifndef FREERTOS_CONFIG_H
 #define FREERTOS_CONFIG_H
 
-#define xPortPendSVHandler PendSV_Handler
+#define xPortPendSVHandler  PendSV_Handler
 #define xPortSysTickHandler SysTick_Handler
-#define vPortSVCHandler SVC_Handler
-
-
+#define vPortSVCHandler     SVC_Handler
 
 /*-----------------------------------------------------------
  * Application specific definitions.
@@ -79,12 +77,13 @@
 #define configTICK_RATE_HZ			( ( portTickType ) 100 )
 #define configMAX_PRIORITIES		( ( unsigned portBASE_TYPE ) 5 )
 #define configMINIMAL_STACK_SIZE	( ( unsigned short ) 128 )
-#define configTOTAL_HEAP_SIZE		( ( size_t ) ( 17 * 1024 ) )
+#define configTOTAL_HEAP_SIZE		( ( size_t ) ( 15 * 1024 ) )
 #define configMAX_TASK_NAME_LEN		( 16 )
 #define configUSE_TRACE_FACILITY	0
 #define configUSE_16_BIT_TICKS		0
 #define configIDLE_SHOULD_YIELD		1
 #define configUSE_MUTEXES			1
+#define configASSERT(x)   			if (!(x)) for(;;);
 
 /* Co-routine definitions. */
 #define configUSE_CO_ROUTINES 		0
