@@ -250,11 +250,10 @@ void vPortSVCHandler( void )
 
 static void prvPortStartFirstTask( void )
 {
+//
+//					" ldr r0, =0xE000ED08 	\n" /* Use the NVIC offset register to locate the stack. */
+//					" ldr r0, [r0] 			\n"
 	__asm volatile(
-					" ldr r0, =0xE000ED08 	\n" /* Use the NVIC offset register to locate the stack. */
-					" ldr r0, [r0] 			\n"
-					" ldr r0, [r0] 			\n"
-					" msr msp, r0			\n" /* Set the msp back to the start of the stack. */
 					" cpsie i				\n" /* Globally enable interrupts. */
 					" svc 0					\n" /* System call to start first task. */
 					" nop					\n"
