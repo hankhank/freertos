@@ -171,7 +171,7 @@ not necessary for to use this port.  They are defined so the common demo files
 
 /*-----------------------------------------------------------*/
 
-#ifdef configASSERT
+#if defined(configASSERT) && !defined(QEMU_BUILD)
 	void vPortValidateInterruptPriority( void );
 	#define portASSERT_IF_INTERRUPT_PRIORITY_INVALID() 	vPortValidateInterruptPriority()
 #endif
