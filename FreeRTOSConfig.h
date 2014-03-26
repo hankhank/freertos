@@ -83,7 +83,7 @@
 #define configUSE_16_BIT_TICKS		  0
 #define configIDLE_SHOULD_YIELD		  1
 #define configUSE_COUNTING_SEMAPHORES 1
-#define configUSE_MUTEXES			  0
+#define configUSE_MUTEXES			  1
 #define configASSERT(x)   			  if (!(x)) for(;;);
 #define configUSE_NEWLIB_REENTRANT    1
 
