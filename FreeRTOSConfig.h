@@ -96,7 +96,7 @@
 /* Timer config */
 #define configTIMER_TASK_PRIORITY      4
 #define configTIMER_QUEUE_LENGTH       4
-#define configTIMER_TASK_STACK_DEPTH   64
+#define configTIMER_TASK_STACK_DEPTH   128
 
 /* Set the following definitions to 1 to include the API function, or zero
 to exclude the API function. */
