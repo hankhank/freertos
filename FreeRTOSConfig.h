@@ -77,8 +77,8 @@
 #define configCPU_CLOCK_HZ			   ( ( unsigned long ) 72000000 )	
 #define configTICK_RATE_HZ			   ( ( portTickType ) 1000 )
 #define configMAX_PRIORITIES		   ( ( unsigned portBASE_TYPE ) 5 )
-#define configMINIMAL_STACK_SIZE	   ( ( unsigned short ) 32 )
-#define configTOTAL_HEAP_SIZE		   ( ( size_t ) (12 * 1024) )
+#define configMINIMAL_STACK_SIZE	   ( ( unsigned short ) 64 )
+#define configTOTAL_HEAP_SIZE		   ( ( size_t ) (11 * 1024) )
 #define configMAX_TASK_NAME_LEN		   ( 4 )
 #define configUSE_TRACE_FACILITY	   1
 #define configUSE_16_BIT_TICKS		   0
@@ -87,15 +87,17 @@
 #define configUSE_MUTEXES			   1
 #define configASSERT(x)   			   if (!(x)) for(;;);
 #define configUSE_NEWLIB_REENTRANT     0
-#define configCHECK_FOR_STACK_OVERFLOW 1
+#define configCHECK_FOR_STACK_OVERFLOW 2
+#define configUSE_MALLOC_FAILED_HOOK   1
+#define configGENERATE_RUN_TIME_STATS  0
 
 /* Co-routine definitions. */
-#define configUSE_CO_ROUTINES 		0
+#define configUSE_CO_ROUTINES 		      0
 #define configMAX_CO_ROUTINE_PRIORITIES ( 2 )
 
 /* Timer config */
 #define configTIMER_TASK_PRIORITY      4
-#define configTIMER_QUEUE_LENGTH       4
+#define configTIMER_QUEUE_LENGTH       8
 #define configTIMER_TASK_STACK_DEPTH   128
 
 /* Set the following definitions to 1 to include the API function, or zero
