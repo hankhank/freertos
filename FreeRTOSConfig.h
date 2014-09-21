@@ -1,5 +1,5 @@
 /*
-    FreeRTOS V6.0.5 - Copyright (C) 2010 Real Time Engineers Ltd.
+    FreeRTOS V7.6.0 - Copyright (C) 2010 Real Time Engineers Ltd.
 
     ***************************************************************************
     *                                                                         *
@@ -113,11 +113,12 @@ to exclude the API function. */
 #define INCLUDE_vTaskDelayUntil			    1
 #define INCLUDE_vTaskDelay				    1
 #define INCLUDE_uxTaskGetStackHighWaterMark 1
+#define INCLUDE_eTaskGetState               1
 
 /* This is the raw value as per the Cortex-M3 NVIC.  Values can be 255
 (lowest) to 0 (1?) (highest). */
 #define configKERNEL_INTERRUPT_PRIORITY 		0xff
-#define configMAX_SYSCALL_INTERRUPT_PRIORITY 	0xb0 /* equivalent to 0xb0, or priority 11. */
+#define configMAX_SYSCALL_INTERRUPT_PRIORITY 	0x90 /* equivalent to 0xb0, or priority 11. */
 
 #endif /* FREERTOS_CONFIG_H */
 
