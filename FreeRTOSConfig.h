@@ -79,8 +79,8 @@
 #define configTICK_RATE_HZ			   ( ( portTickType ) 1000 )
 #endif
 #define configMAX_PRIORITIES		   ( ( unsigned portBASE_TYPE ) 5 )
-#define configMINIMAL_STACK_SIZE	   ( ( unsigned short ) 64 )
-#define configTOTAL_HEAP_SIZE		   ( ( size_t ) (11 * 1024) )
+#define configMINIMAL_STACK_SIZE	   ( ( unsigned short ) 128 )
+#define configTOTAL_HEAP_SIZE		   ( ( size_t ) (24 * 1024) )
 #define configMAX_TASK_NAME_LEN		   ( 4 )
 #define configUSE_TRACE_FACILITY	   1
 #define configUSE_16_BIT_TICKS		   0
@@ -100,7 +100,7 @@
 /* Timer config */
 #define configTIMER_TASK_PRIORITY      4
 #define configTIMER_QUEUE_LENGTH       8
-#define configTIMER_TASK_STACK_DEPTH   128
+#define configTIMER_TASK_STACK_DEPTH   512
 
 /* Set the following definitions to 1 to include the API function, or zero
 to exclude the API function. */
